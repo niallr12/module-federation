@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="316" viewBox="0 0 680 316" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+<title>Access enforcement for a user entitled only to Product A</title>
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<rect width="680" height="316" fill="#FFFFFF"/>
+<rect x="40" y="40" width="210" height="120" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.75"/>
+<text x="56" y="62" text-anchor="start" dominant-baseline="central" font-size="14" font-weight="500" fill="#2C2C2A">User B's token</text>
+<text x="56" y="90" text-anchor="start" dominant-baseline="central" font-size="12" font-weight="400" fill="#5F5E5A">aud: api://products</text>
+<text x="56" y="112" text-anchor="start" dominant-baseline="central" font-size="12" font-weight="400" fill="#5F5E5A">scp: a.read, b.read</text>
+<text x="56" y="134" text-anchor="start" dominant-baseline="central" font-size="12" font-weight="400" fill="#5F5E5A">groups: Product-A-Users</text>
+<line x1="250" y1="100" x2="288" y2="100" stroke="#5F5E5A" stroke-width="1" marker-end="url(#a)"/>
+<rect x="290" y="72" width="150" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.75"/>
+<text x="365.0" y="90.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#085041">BFF gate</text>
+<text x="365.0" y="110.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">Group per route</text>
+<path d="M440 90 L465 90 L465 58 L488 58" fill="none" stroke="#5F5E5A" stroke-width="1" marker-end="url(#a)"/>
+<path d="M440 110 L465 110 L465 142 L488 142" fill="none" stroke="#5F5E5A" stroke-width="1" marker-end="url(#a)"/>
+<rect x="490" y="30" width="150" height="56" rx="8" fill="#FAECE7" stroke="#993C1D" stroke-width="0.75"/>
+<text x="565.0" y="48.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#712B13">/api/b/*</text>
+<text x="565.0" y="68.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#993C1D">403 at the BFF</text>
+<rect x="490" y="114" width="150" height="56" rx="8" fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.75"/>
+<text x="565.0" y="132.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#085041">/api/a/*</text>
+<text x="565.0" y="152.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#0F6E56">Forwarded</text>
+<line x1="565" y1="170" x2="565" y2="218" stroke="#5F5E5A" stroke-width="1" marker-end="url(#a)"/>
+<rect x="465" y="220" width="175" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.75"/>
+<text x="552.5" y="238.0" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="500" fill="#2C2C2A">Product A API</text>
+<text x="552.5" y="258.0" text-anchor="middle" dominant-baseline="central" font-size="12" fill="#5F5E5A">Checks scope + group</text>
+</svg>
